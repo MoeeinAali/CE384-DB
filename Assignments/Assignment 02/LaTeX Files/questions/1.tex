@@ -1,0 +1,69 @@
+ما دارای روابط Person,Frequents,Eats,Serves هستیم. از این روابط استفاده کرده و خواسته مسئله را بدست می‌آوریم.
+\subsection*{بخش 1}
+در این بخش باید همه پیتزافروشی‌هایی را پیدا کنیم که حداقل یک مشتری بالای ۸۰ سال دارند.
+\begin{itemize}	
+	\item انتخاب افرادی که سن آن ها بالای ۸۰ سال است:
+	
+	\setLTR
+	$Elderly = \sigma_{age \geq 80} (Person)$
+	\setRTL
+	\item پیدا کردن پیتزافروشی‌هایی که این افراد به آنها مراجعه کرده‌اند:
+	
+	\setLTR
+	$ElderlyFrequents = Elderly \bowtie_{Person.ID=Frequents.personID} Frequents$
+	\setRTL
+	
+	\item جدا کردن نام پیتزافروشی‌ها:
+	
+	\setLTR
+	$Result = \prod_{pizzeria} (ElderlyFrequents)$
+	\setRTL
+\end{itemize}
+
+
+
+
+\subsection*{بخش 2}
+در این بخش باید همه پیتزا فروشی‌هایی را بیابیم که حداقل یک پیتزا را سرو می‌کنند که قیمتی زیر ۲۵۰ هزار
+تومن دارد و فردی به نام عموحسن آن را میخورد.
+\begin{itemize}	
+	\item انتخاب پیتزافروشی‌هایی که حداقل یک پیتزا را با قیمت کمتر از ۲۵۰ هزار تومان سرو می‌کنند:
+	
+	\setLTR
+	$CheapPizzas = \sigma_{price < 250000} (Serves)$
+	\setRTL
+	
+	\item انتخاب افرادی که به نام "عموحسن" پیتزا می‌خورند: 
+	
+	\setLTR
+	$Hassans = \sigma_{name = 'AmooHasan'} (Person)$
+	\setRTL
+	
+	\item پیدا کردن پیتزافروشی‌هایی که "عموحسن" به آنها مراجعه می‌کند: 
+	
+	\setLTR
+	$HassanFrequents = Hassan \bowtie_{Hassan.ID=Frequents.PersonID} Frequents$
+	\setRTL
+	
+	\item پیدا کردن اشتراک پیتزافروشی‌هایی که حداقل یک پیتزا با قیمت کمتر از ۲۵۰ هزار تومان را سرو می‌کنند و "عموحسن" به آنها مراجعه می‌کند
+	
+	\setLTR
+	$PizzaPlaces = \prod_{pizzeria} (HassanFrequents)$
+	
+	$CheapPizzasPlaces = \prod_{pizzeria} (CheapPizzas)$
+	
+	$Result = CheapPizzasPlaces \cap PizzaPlaces$
+	\setRTL
+
+\end{itemize}
+
+
+
+
+
+\subsection*{بخش 3}
+متن تست برای این بخش
+\subsection*{بخش 4}
+متن تست برای این بخش
+\subsection*{بخش 5}
+متن تست برای این بخش
