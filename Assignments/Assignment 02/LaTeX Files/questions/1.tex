@@ -56,14 +56,48 @@
 	\setRTL
 
 \end{itemize}
-
-
-
-
+\pagebreak
 
 \subsection*{بخش 3}
-متن تست برای این بخش
+در این بخش باید پیتزافروشی‌هایی که فقط مشتریان آقا یا فقط مشتریان خانم دارند را پیدا کنیم.
+\begin{itemize}	
+	\item جدا کردن مشتریان خانم وآقا:
+	
+	\setLTR
+	$MaleCustomers = \sigma_{gender = 'male'} (Person)$
+	
+	$FemaleCustomers = \sigma_{gender = 'female'} (Person)$
+	\setRTL
+	
+	\item پیدا کردن پیتزافروشی‌هایی که فقط مشتریان آقا را دارند:
+	
+		\setLTR
+$MaleOnly = Frequents - (Frequents \ltimes_{Frequents.personID=MaleCustomers.ID} MaleCustomers)$
+
+$MaleOnlyPizzerias = \prod_{pizzeria} (MaleOnly)$
+	\setRTL
+	
+		\item پیدا کردن پیتزافروشی‌هایی که فقط مشتریان خانم را دارند:
+	
+	\setLTR
+	$FemaleOnly = Frequents - (Frequents \ltimes_{Frequents.personID=FemaleCustomers.ID} FemaleCustomers)$
+	
+	$FemaleOnlyPizzerias = \prod_{pizzeria} (FemaleOnly)$
+	\setRTL
+	
+	\item پیدا کردن اشتراک پیتزافروشی‌هایی که فقط مشتریان آقا یا فقط مشتریان خانم را دارند:
+	
+		\setLTR
+	$Result = MaleOnlyPizzerias \cup FemaleOnlyPizzerias$
+	\setRTL
+	
+	
+\end{itemize}
+
 \subsection*{بخش 4}
-متن تست برای این بخش
+در این بخش باید افرادی را بیابیم که مشتری همه پیتزافروشی‌هایی هستند که حداقل یکی از پیتزاهایی که
+میخورند را سرو می‌کنند.
+
+
 \subsection*{بخش 5}
-متن تست برای این بخش
+متن تست برای این بخ
