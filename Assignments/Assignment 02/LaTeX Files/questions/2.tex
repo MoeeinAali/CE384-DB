@@ -1,0 +1,104 @@
+ما دارای روابط Factory,Product,FP را هستیم و با استفاده از آن‌ها به سوالات پاسخ می‌دهیم.
+\subsection*{بخش 1}
+در این بخش شماره‌ی کارخانه‌های شهر تهران که‌ وضعیت آنها Open  باشد را پیدا کنیم.
+\begin{itemize}	
+	\item فیلتر کردن کارخانه‌ها با ویژگی‌های گفته شده:
+	
+	\setLTR
+	
+	$\sigma_{Factory.status="Open" \land Factory.city="Tehran"} (Factory)$
+	\setRTL
+	
+	\item
+	حال شماره‌ی کارخانه‌هارا جدا می‌کنیم:
+	\setLTR
+
+	$FilteredFactories = \sigma_{Factory.status="Open" \land Factory.city="Tehran"} (Factory)$
+	
+	$FilteredFactoriesID's = \prod_{fID} (FilteredFactories)$
+	\setRTL
+
+
+
+\end{itemize}
+
+
+\subsection*{بخش 2}
+در این بخش باید نام کارخانه‌هایی که قطعه‌ی 40678 را تولید می‌کنند پیدا کنیم.
+\begin{itemize}	
+	
+\item ابتدا رابطه بین محصول و کارخانه را برحسب کد محصول فیلتر می‌کنیم:
+
+\setLTR
+
+$FilteredFP = \sigma_{FP.pID = 40678}(FP)$
+\setRTL
+
+\item حال رابطه فیلتر شده را با رابطه‌ی کارخانه‌‌ها Join Semi می‌کنیم:
+
+\setLTR
+
+$FilteredFactories = Factory \ltimes_{FilteredFactories.sID = Factory.fID}FilteredFP$
+\setRTL
+
+
+\item حال نام‌هارا جدا کرده و خروجی می‌دهیم:
+
+\setLTR
+
+$FilteredFactoriesNames = \prod _{fName}(FilteredFactories) $
+\setRTL
+
+\end{itemize}
+
+\subsection*{بخش 3}
+در این بخش باید نام کارخانه‌هایی که حداقل یک قطعه قرمز تولید می‌کنند را پیدا کنیم.
+
+\begin{itemize}	
+	\item ابتدا محصولات قرمز را جدا می‌کنیم:
+	
+	\setLTR
+	$RedProducts = \sigma_{Color='Red'}(Product) $
+	\setRTL
+	
+	
+	\item حال کارخانه‌هایی را که قطعات قرمز را تولید می‌کنند را پیدا می‌کنیم:
+	
+	\setLTR
+	$RedProductFP = RedProducts\bowtie_{RedProducts.pID=FP.pID}FP$
+	
+	$Factories = RedProductFP\bowtie_{RedProductFP.sID=Factory.fID}Factory$
+	\setRTL
+	
+		\item فیلتر نام کارخانه:
+	
+	\setLTR
+	$FactoryNames = \prod_{fName}Factories$
+
+	\setRTL
+\end{itemize}
+\pagebreak
+\subsection*{بخش 4}
+در این بخش باید نام کارخانه‌هایی که حداقل یک قطعه تهیه شده توسط کارخانه‌ی Sim Iran را تولید می‌کنند را پیدا کنیم.
+
+\begin{itemize}	
+	\item ابتدا قطعات تولیدی این کارخانه خاص را پیدا کرده:
+	
+	\setLTR
+	$IransimProducts = \prod_{pID} {({(\sigma_{fName='Iran Sim'}Factory)}\bowtie_{Factory.fID=FP.sID}FP)} $
+	\setRTL
+	
+		\item حال آن کارخانه‌های خاص را پیدا می‌کنیم:
+	
+	\setLTR
+	$FactoriesID =\prod_{sID}{(IransimProducts \bowtie_{IransimProducts.pID=FP.pID}FP)}  $
+	\setRTL
+	
+			\item در آخر نام آن‌ها را پیدا می‌کنیم:
+	
+	\setLTR
+	$FactoriesName =\prod_{fName}{(FactoriesID \bowtie_{FactoriesID.sID=Factory.fID}Factory)}  $
+	\setRTL
+	
+	
+\end{itemize}
