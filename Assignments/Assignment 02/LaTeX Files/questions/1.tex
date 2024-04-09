@@ -95,7 +95,41 @@ $MaleOnlyPizzerias = \prod_{pizzeria} (MaleOnly)$
 \end{itemize}
 
 \subsection*{بخش 4}
-متن تست برای این بخش
+در این بخش باید آن افرادی که مشتری همه پیتزافروشی‌هایی که پیتزاهای مورد علاقه آن‌ها را دارد شناسایی کرد.
+\begin{itemize}	
+		\item
+		ابتدا لیست پیتزافروشی‌هایی که حداقل یکی از غذاهای مورد علاقه هر فرد را دارند می‌سازیم:
+		
+	
+	\setLTR
+	$PizzeriasPersons =\prod_{Pzzeria,personID} (Serves \bowtie_{Serves.pizza = pizza}({Person \bowtie_{Person.ID=Eats.personID}Eats}))$
+	\setRTL
+	
+	\item 
+	حال از رابطه Frequents استفاده می‌کنیم:
+	
+	\setLTR
+	$Result =Frequents \bowtie_{Frequents.personID \neq  personID}(PizzeriasPersons - Frequents)$
+	
+	$ResultNames =  \prod_{name}(Result \bowtie_{Result.personID=Person.ID}Person)$
+	\setRTL
+\end{itemize}
+
+استفاده از تقسیمممممممممممممممم
 
 \subsection*{بخش 5}
-متن تست برای این بخش
+در این بخش باید پیتزافروشی‌هایی را بیابیم که ارزان‌ترین پپرونی‌ها را دارند.
+\begin{itemize}
+	\item ابتدا ارزان‌ترین پپرونی را می‌یابیم:
+	
+	\setLTR
+	$CheapestPrice = \prod_{price}(Serves) - \prod_{price}[\sigma_{P1.price>P2.price}[\rho_{P1}(Serves)\times\rho_{P2}(Serves)]]$
+	\setRTL
+	
+	\item حال آن پیتزافروشی‌هایی که این پپرونی را می‌فروشند را پیدا می‌کنیم:
+	
+	\setLTR
+	
+	$\prod_{pizzeria}[\sigma_{pizza=pepperoni}(Serves)\bowtie_{Serves.price = CheapestPrice.price}CheapestPrice]$
+	\setRTL
+\end{itemize}
