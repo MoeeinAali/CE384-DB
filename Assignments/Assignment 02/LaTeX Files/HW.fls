@@ -1118,6 +1118,9 @@ INPUT questions/2.tex
 INPUT ./questions/3.tex
 INPUT questions/3.tex
 INPUT questions/3.tex
+INPUT ./questions/4.tex
+INPUT questions/4.tex
+INPUT questions/4.tex
 INPUT HW.aux
 INPUT ./HW.out
 INPUT ./HW.out

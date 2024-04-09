@@ -104,18 +104,17 @@ $MaleOnlyPizzerias = \prod_{pizzeria} (MaleOnly)$
 	\setLTR
 	$PizzeriasPersons =\prod_{Pzzeria,personID} (Serves \bowtie_{Serves.pizza = pizza}({Person \bowtie_{Person.ID=Eats.personID}Eats}))$
 	\setRTL
+
 	
 	\item 
-	حال از رابطه Frequents استفاده می‌کنیم:
+	در آخر از عملگر تقسیم استفاده کرده و خواسته سوال را بدست می‌آوریم:
 	
 	\setLTR
-	$Result =Frequents \bowtie_{Frequents.personID \neq  personID}(PizzeriasPersons - Frequents)$
+	$FrequentsName = \prod_{name,PersonID,Pizzeria}({Frequents \bowtie_{Frequents.personID=Person.ID} Person})$
 	
-	$ResultNames =  \prod_{name}(Result \bowtie_{Result.personID=Person.ID}Person)$
+	$Result = \prod_{name}(FrequentsName  \text{\textdiv}  PizzeriasPersons)$
 	\setRTL
 \end{itemize}
-
-استفاده از تقسیمممممممممممممممم
 
 \subsection*{بخش 5}
 در این بخش باید پیتزافروشی‌هایی را بیابیم که ارزان‌ترین پپرونی‌ها را دارند.

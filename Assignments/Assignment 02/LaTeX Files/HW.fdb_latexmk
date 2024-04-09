@@ -1,13 +1,13 @@
 # Fdb version 4
-["xdvipdfmx"] 1712534867 "HW.xdv" "HW.pdf" "HW" 1712534868 0
-  "HW.xdv" 1712534867 43132 390d754792be8db4ff627049e9c61b28 "xelatex"
+["xdvipdfmx"] 1712662600 "HW.xdv" "HW.pdf" "HW" 1712662601 0
+  "HW.xdv" 1712662600 55340 49b08fcaee92ea015ef7956c927ac03c "xelatex"
   (generated)
   "HW.pdf"
   (rewritten before read)
-["xelatex"] 1712534866 "d:/Github/MoeeinAali/CE-Course/CE384-DB/Assignments/Assignment 02/LaTeX Files/HW.tex" "HW.xdv" "HW" 1712534868 0
-  "HW.aux" 1712534867 555 8cd7ae2fcfe3db55c1ee5dcbced043b8 "xelatex"
-  "HW.out" 1712534867 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "HW.tex" 1712532969 465 91b42538dcb34e938a6380de335edadf ""
+["xelatex"] 1712662598 "d:/Github/MoeeinAali/CE-Course/CE384-DB/Assignments/Assignment 02/LaTeX Files/HW.tex" "HW.xdv" "HW" 1712662601 0
+  "HW.aux" 1712662600 555 f1b97746c891217ffe352af3c88039f3 "xelatex"
+  "HW.out" 1712662600 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "HW.tex" 1712661541 524 c883feba423508a59803993af78b0df1 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1710882325 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1710883324 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1710881908 1004 54797486969f23fa377b128694d548df ""
@@ -173,10 +173,11 @@
   "c:/texlive/2023/texmf.cnf" 1710883334 713 e69b156964470283e0530f5060668171 ""
   "commons/course.sty" 1712339514 6965 d7d251022a6f55fdf4aa8b804067b834 ""
   "commons/sharif.png" 1710886927 34782 91c831e22cd5b8b30cdd0d7fa2b74a71 ""
-  "d:/Github/MoeeinAali/CE-Course/CE384-DB/Assignments/Assignment 02/LaTeX Files/HW.tex" 1712532969 465 91b42538dcb34e938a6380de335edadf ""
-  "questions/1.tex" 1712534056 4559 fa37dfd3a72b6332a8f69a034cd4b3a7 ""
+  "d:/Github/MoeeinAali/CE-Course/CE384-DB/Assignments/Assignment 02/LaTeX Files/HW.tex" 1712661541 524 c883feba423508a59803993af78b0df1 ""
+  "questions/1.tex" 1712654454 5222 082e48257b7ee47fd5df7b53c3bfe01c ""
   "questions/2.tex" 1712495753 3275 782ae62d656647ad573049d03b101e43 ""
-  "questions/3.tex" 1712534861 1488 03853a9a67522aac289f5cddc8088d7a ""
+  "questions/3.tex" 1712535407 1807 e14e2e75e776a4dd904bd2d944f264ad ""
+  "questions/4.tex" 1712662597 2113 4a7d31d72705de3e1b9212c26d909e4e ""
   (generated)
   "HW.aux"
   "HW.log"
