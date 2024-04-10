@@ -61,7 +61,7 @@ $MaleOnlyPizzerias = \prod_{pizzeria} (MaleOnly)$
 	$FemaleOnlyPizzerias = \prod_{pizzeria} (FemaleOnly)$
 	\setRTL
 	
-	\item پیدا کردن اشتراک پیتزافروشی‌هایی که فقط مشتریان آقا یا فقط مشتریان خانم را دارند:
+	\item پیدا کردن اجتماع پیتزافروشی‌هایی که فقط مشتریان آقا یا فقط مشتریان خانم را دارند:
 	
 		\setLTR
 	$Result = MaleOnlyPizzerias \cup FemaleOnlyPizzerias$
@@ -70,25 +70,28 @@ $MaleOnlyPizzerias = \prod_{pizzeria} (MaleOnly)$
 	
 \end{itemize}
 
+
 \subsection*{بخش 4}
 در این بخش باید آن افرادی که مشتری همه پیتزافروشی‌هایی که پیتزاهای مورد علاقه آن‌ها را دارد شناسایی کرد.
 \begin{itemize}	
-		\item پیدا کردن رستوران‌هایی که پیتزاهایی که هر فرد می‌خورد را سرو می‌کنند:
-		
+	\item
+	ابتدا لیست پیتزافروشی‌هایی که حداقل یکی از غذاهای مورد علاقه هر فرد را دارند می‌سازیم:
+	
+\setLTR
+$PizzeriasPerson =\prod_{Pzzeria,personID} (Serves \bowtie_{Serves.pizza =Eats.pizza}Eats)$
+\setRTL
+
+	\item 
+	در آخر آن افرادی که شامل این Tupple ها نیستند را شناسایی می‎کنیم و از کل افراد حذف می‎کنیم:
 	
 	\setLTR
-	$ServedPizzerias=\prod_{personID,pizzeria}(Eats\bowtie_{Eats.pizza=Serves.pizza}(Serves))$
-	\setRTL
 	
-	\item اشتراک موارد بالا با پیتزافروشی‌هایی که هر فرد مشتری آن‌ها است، جواب ما است:
-	
-	\setLTR
-	$Result = \prod_{pizzeria} (Frequents \cap ServedPizzerias)$
-	\setRTL
-
+	$Result = \prod_{personID}Frequents - \prod_{personID}(PizzeriasPerson - Frequents)$
 	
 
+	\setRTL
 \end{itemize}
+
 
 \subsection*{بخش 5}
 در این بخش باید پیتزافروشی‌هایی را بیابیم که ارزان‌ترین پپرونی‌ها را دارند.
