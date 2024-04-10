@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  9 APR 2024 15:06
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  10 APR 2024 14:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -890,94 +890,82 @@ LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
 (Font)              scaled to size 14.39996pt on input line 13.
 (./questions/1.tex
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/n' will be
-(Font)              scaled to size 11.99997pt on input line 3.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+(Font)              scaled to size 11.99997pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/n' will be
-(Font)              scaled to size 8.39998pt on input line 5.
+(Font)              scaled to size 8.39998pt on input line 4.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/n' will be
-(Font)              scaled to size 5.99998pt on input line 5.
+(Font)              scaled to size 5.99998pt on input line 4.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/bx/n' in size <10> not available
-(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 5.
+(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
-(Font)              scaled to size 11.99997pt on input line 5.
+(Font)              scaled to size 11.99997pt on input line 4.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/bx/n' in size <7> not available
-(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 5.
+(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
-(Font)              scaled to size 8.39998pt on input line 5.
+(Font)              scaled to size 8.39998pt on input line 4.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/bx/n' in size <5> not available
-(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 5.
+(Font)              Font shape `TU/XBNiloofar.ttf(1)/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/b/n' will be
-(Font)              scaled to size 5.99998pt on input line 5.
+(Font)              scaled to size 5.99998pt on input line 4.
 
 
 LaTeX Font Warning: Font shape `TU/XBNiloofar.ttf(1)/m/it' undefined
-(Font)              using `TU/XBNiloofar.ttf(1)/m/n' instead on input line 5.
+(Font)              using `TU/XBNiloofar.ttf(1)/m/n' instead on input line 4.
 
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/it' will be
-(Font)              scaled to size 8.39998pt on input line 5.
+(Font)              scaled to size 8.39998pt on input line 4.
 LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(1)/m/it' will be
-(Font)              scaled to size 5.99998pt on input line 5.
+(Font)              scaled to size 5.99998pt on input line 4.
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 5.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 10.
+LaTeX Font Warning: Command \small invalid in math mode on input line 4.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 16.
+LaTeX Font Warning: Command \small invalid in math mode on input line 9.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 30.
+LaTeX Font Warning: Command \small invalid in math mode on input line 15.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 36.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 42.
+LaTeX Font Warning: Command \small invalid in math mode on input line 40.
 
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 48.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 56.
+
+
+Overfull \hbox (6.65016pt too wide) in paragraph at lines 59--60
+[][]$\OML/cmm/m/it/10 FemaleOnly \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Frequents \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Frequents \U/msb/m/n/10 n[] \OML/cmm/m/it/10 FemaleCustomers\OT1/cmr/m/n/10 )$ []
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 64.
 
 [1
 
 ]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 64.
+LaTeX Font Warning: Command \small invalid in math mode on input line 76.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 72.
+LaTeX Font Warning: Command \small invalid in math mode on input line 83.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 80.
+LaTeX Font Warning: Command \small invalid in math mode on input line 96.
 
 
-Overfull \hbox (6.65016pt too wide) in paragraph at lines 83--84
-[][]$\OML/cmm/m/it/10 FemaleOnly \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Frequents \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Frequents \U/msb/m/n/10 n[] \OML/cmm/m/it/10 FemaleCustomers\OT1/cmr/m/n/10 )$ []
- []
+LaTeX Font Warning: Command \small invalid in math mode on input line 102.
 
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 88.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 101.
-
-
-Overfull \hbox (46.84248pt too wide) in paragraph at lines 105--107
-[][]$\OML/cmm/m/it/10 PizzeriasPersons \OT1/cmr/m/n/10 = [][](\OML/cmm/m/it/10 Serves .[]/[] \OT1/cmr/m/n/10 ([]))$ []
- []
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 110.
-
-LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/n' will be
-(Font)              scaled to size 5.99998pt on input linestions/2.tex
+) [2] (./questions/2.tex
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 5.
 
@@ -994,17 +982,7 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 37.
 LaTeX Font Warning: Command \small invalid in math mode on input line 45.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 58.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 65.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 73.
-
-[3]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 85.
+LaTeX Font Warning: Command \small invalid in math mode on input Font Warning: Command \small invalid in math mode on input line 85.
 
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 91.
@@ -1012,7 +990,10 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 91.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 97.
 
-) [4] (./questions/3.tex) [5] (./questions/4.tex) [6] (./HW.aux)
+) [4] (./questions/3.tex) [5] (./questions/4.tex
+LaTeX Font Info:    Font shape `TU/XBNiloofar.ttf(0)/m/n' will be
+(Font)              scaled to size 5.99998pt on input line 20.
+) [6] (./HW.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1022,15 +1003,15 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 Here is how much of TeX's memory you used:
  25414 strings out of 476683
  481805 string characters out of 5807575
- 1858012 words of memory out of 5000000
+ 1860012 words of memory out of 5000000
  45162 multiletter control sequences out of 15000+600000
  514650 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,5n,101p,1342b,343s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,5n,101p,1342b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on HW.pdf (6 pages).
-0 for 9000
+00 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,5n,101p,1422b,343s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,5n,101p,1422b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.xdv (6 pages, 55340 bytes).
+Output written on HW.xdv (6 pages, 50252 bytes).

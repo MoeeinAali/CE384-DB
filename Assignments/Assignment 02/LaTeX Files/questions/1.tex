@@ -1,4 +1,3 @@
-ما دارای روابط Person,Frequents,Eats,Serves هستیم. از این روابط استفاده کرده و خواسته مسئله را بدست می‌آوریم.
 \subsection*{بخش 1}
 در این بخش باید همه پیتزافروشی‌هایی را پیدا کنیم که حداقل یک مشتری بالای ۸۰ سال دارند.
 \begin{itemize}	
@@ -26,37 +25,14 @@
 \subsection*{بخش 2}
 در این بخش باید همه پیتزا فروشی‌هایی را بیابیم که حداقل یک پیتزا را سرو می‌کنند که قیمتی زیر ۲۵۰ هزار
 تومن دارد و فردی به نام عموحسن آن را میخورد.
-\begin{itemize}	
-	\item انتخاب پیتزافروشی‌هایی که حداقل یک پیتزا را با قیمت کمتر از ۲۵۰ هزار تومان سرو می‌کنند:
-	
+
 	\setLTR
-	$CheapPizzas = \sigma_{price < 250000} (Serves)$
-	\setRTL
+	$Result = \prod_{pizzeria}(\sigma_{(price<250,000)\land(name="Amoo Hassan")}($
 	
-	\item انتخاب افرادی که به نام "عموحسن" پیتزا می‌خورند: 
-	
-	\setLTR
-	$Hassans = \sigma_{name = 'AmooHasan'} (Person)$
-	\setRTL
-	
-	\item پیدا کردن پیتزافروشی‌هایی که "عموحسن" به آنها مراجعه می‌کند: 
-	
-	\setLTR
-	$HassanFrequents = Hassan \bowtie_{Hassan.ID=Frequents.PersonID} Frequents$
-	\setRTL
-	
-	\item پیدا کردن اشتراک پیتزافروشی‌هایی که حداقل یک پیتزا با قیمت کمتر از ۲۵۰ هزار تومان را سرو می‌کنند و "عموحسن" به آنها مراجعه می‌کند
-	
-	\setLTR
-	$PizzaPlaces = \prod_{pizzeria} (HassanFrequents)$
-	
-	$CheapPizzasPlaces = \prod_{pizzeria} (CheapPizzas)$
-	
-	$Result = CheapPizzasPlaces \cap PizzaPlaces$
+	$\qquad \qquad \qquad \quad  Serves\bowtie_{Serves.pizza=Eats.pizza}Eats \bowtie_{Eats.personID=Person.ID}Person))$
+
 	\setRTL
 
-\end{itemize}
-\pagebreak
 
 \subsection*{بخش 3}
 در این بخش باید پیتزافروشی‌هایی که فقط مشتریان آقا یا فقط مشتریان خانم دارند را پیدا کنیم.
@@ -97,23 +73,21 @@ $MaleOnlyPizzerias = \prod_{pizzeria} (MaleOnly)$
 \subsection*{بخش 4}
 در این بخش باید آن افرادی که مشتری همه پیتزافروشی‌هایی که پیتزاهای مورد علاقه آن‌ها را دارد شناسایی کرد.
 \begin{itemize}	
-		\item
-		ابتدا لیست پیتزافروشی‌هایی که حداقل یکی از غذاهای مورد علاقه هر فرد را دارند می‌سازیم:
+		\item پیدا کردن رستوران‌هایی که پیتزاهایی که هر فرد می‌خورد را سرو می‌کنند:
 		
 	
 	\setLTR
-	$PizzeriasPersons =\prod_{Pzzeria,personID} (Serves \bowtie_{Serves.pizza = pizza}({Person \bowtie_{Person.ID=Eats.personID}Eats}))$
+	$ServedPizzerias=\prod_{personID,pizzeria}(Eats\bowtie_{Eats.pizza=Serves.pizza}(Serves))$
+	\setRTL
+	
+	\item اشتراک موارد بالا با پیتزافروشی‌هایی که هر فرد مشتری آن‌ها است، جواب ما است:
+	
+	\setLTR
+	$Result = \prod_{pizzeria} (Frequents \cap ServedPizzerias)$
 	\setRTL
 
 	
-	\item 
-	در آخر از عملگر تقسیم استفاده کرده و خواسته سوال را بدست می‌آوریم:
-	
-	\setLTR
-	$FrequentsName = \prod_{name,PersonID,Pizzeria}({Frequents \bowtie_{Frequents.personID=Person.ID} Person})$
-	
-	$Result = \prod_{name}(FrequentsName  \text{\textdiv}  PizzeriasPersons)$
-	\setRTL
+
 \end{itemize}
 
 \subsection*{بخش 5}
@@ -122,7 +96,7 @@ $MaleOnlyPizzerias = \prod_{pizzeria} (MaleOnly)$
 	\item ابتدا ارزان‌ترین پپرونی را می‌یابیم:
 	
 	\setLTR
-	$CheapestPrice = \prod_{price}(Serves) - \prod_{price}[\sigma_{P1.price>P2.price}[\rho_{P1}(Serves)\times\rho_{P2}(Serves)]]$
+	$CheapestPrice = \prod_{price}(Serves) - \prod_{price}[\sigma_{P_1.price>P_2.price}[\rho_{P_1}(Serves)\times\rho_{P_2}(Serves)]]$
 	\setRTL
 	
 	\item حال آن پیتزافروشی‌هایی که این پپرونی را می‌فروشند را پیدا می‌کنیم:

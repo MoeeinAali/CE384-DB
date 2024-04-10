@@ -1,12 +1,12 @@
 # Fdb version 4
-["xdvipdfmx"] 1712662600 "HW.xdv" "HW.pdf" "HW" 1712662601 0
-  "HW.xdv" 1712662600 55340 49b08fcaee92ea015ef7956c927ac03c "xelatex"
+["xdvipdfmx"] 1712746582 "HW.xdv" "HW.pdf" "HW" 1712746583 0
+  "HW.xdv" 1712746582 50252 8f18975c0068b2eccb808360f180a040 "xelatex"
   (generated)
   "HW.pdf"
   (rewritten before read)
-["xelatex"] 1712662598 "d:/Github/MoeeinAali/CE-Course/CE384-DB/Assignments/Assignment 02/LaTeX Files/HW.tex" "HW.xdv" "HW" 1712662601 0
-  "HW.aux" 1712662600 555 f1b97746c891217ffe352af3c88039f3 "xelatex"
-  "HW.out" 1712662600 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+["xelatex"] 1712746581 "d:/Github/MoeeinAali/CE-Course/CE384-DB/Assignments/Assignment 02/LaTeX Files/HW.tex" "HW.xdv" "HW" 1712746583 0
+  "HW.aux" 1712746582 555 f1b97746c891217ffe352af3c88039f3 "xelatex"
+  "HW.out" 1712746582 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   "HW.tex" 1712661541 524 c883feba423508a59803993af78b0df1 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1710882325 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1710883324 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
@@ -174,7 +174,7 @@
   "commons/course.sty" 1712339514 6965 d7d251022a6f55fdf4aa8b804067b834 ""
   "commons/sharif.png" 1710886927 34782 91c831e22cd5b8b30cdd0d7fa2b74a71 ""
   "d:/Github/MoeeinAali/CE-Course/CE384-DB/Assignments/Assignment 02/LaTeX Files/HW.tex" 1712661541 524 c883feba423508a59803993af78b0df1 ""
-  "questions/1.tex" 1712654454 5222 082e48257b7ee47fd5df7b53c3bfe01c ""
+  "questions/1.tex" 1712746580 3977 355d4419c412116a91494b267766cee9 ""
   "questions/2.tex" 1712495753 3275 782ae62d656647ad573049d03b101e43 ""
   "questions/3.tex" 1712535407 1807 e14e2e75e776a4dd904bd2d944f264ad ""
   "questions/4.tex" 1712662597 2113 4a7d31d72705de3e1b9212c26d909e4e ""
