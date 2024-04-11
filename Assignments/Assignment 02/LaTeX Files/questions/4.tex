@@ -19,7 +19,7 @@ $ItemWeapons =\prod_{ItemID} (\sigma_{Type=weapon}(Items))$
 
 $FilteredIDs = \prod_{BuyerID}((\prod_{ItemID,BuyerID}Transactions) \text{\textdiv} (ItemWeapons))$
 
-$Usernames = FilteredIDs \bowtie_{UserIDs.BuyerID = Users.UserID} Users$
+$Usernames =\prod_{username} (FilteredIDs \bowtie_{UserIDs.BuyerID = Users.UserID} Users)$
 \setRTL
 
 \subsubsection*{ج}
