@@ -37,35 +37,22 @@
 \subsection*{بخش 3}
 در این بخش باید پیتزافروشی‌هایی که فقط مشتریان آقا یا فقط مشتریان خانم دارند را پیدا کنیم.
 \begin{itemize}	
-	\item جدا کردن مشتریان خانم وآقا:
+	\item 
+	ابتدا پیتزافروشی‌هایی که حداقل یک مشتری مرد و حداقل یک مشتری زن دارند را پیدا می‌کنیم:
 	
 	\setLTR
-	$MaleCustomers = \sigma_{gender = 'male'} (Person)$
+	$HasMale = \prod_{pizzeria}(Frequents \bowtie_{Frequents.PersonID=Person.ID}(\sigma_{gender=male}Person))$
 	
-	$FemaleCustomers = \sigma_{gender = 'female'} (Person)$
+	$HasFemale = \prod_{pizzeria}(Frequents \bowtie_{Frequents.PersonID=Person.ID}(\sigma_{gender=female}Person))$
 	\setRTL
 	
-	\item پیدا کردن پیتزافروشی‌هایی که فقط مشتریان آقا را دارند:
-	
-		\setLTR
-$MaleOnly = Frequents - (Frequents \ltimes_{Frequents.personID=MaleCustomers.ID} MaleCustomers)$
-
-$MaleOnlyPizzerias = \prod_{pizzeria} (MaleOnly)$
-	\setRTL
-	
-		\item پیدا کردن پیتزافروشی‌هایی که فقط مشتریان خانم را دارند:
-	
+	\item 
+	حال با اشتراک و تفریق این دو مجموعه از کل پیتزافروشی‌ها به جواب می‌رسیم:
 	\setLTR
-	$FemaleOnly = Frequents - (Frequents \ltimes_{Frequents.personID=FemaleCustomers.ID} FemaleCustomers)$
 	
-	$FemaleOnlyPizzerias = \prod_{pizzeria} (FemaleOnly)$
+	$Result = \prod_{pizzeria}(Frequents) - (HasMale \cap HasFemale)$
 	\setRTL
 	
-	\item پیدا کردن اجتماع پیتزافروشی‌هایی که فقط مشتریان آقا یا فقط مشتریان خانم را دارند:
-	
-		\setLTR
-	$Result = MaleOnlyPizzerias \cup FemaleOnlyPizzerias$
-	\setRTL
 	
 	
 \end{itemize}

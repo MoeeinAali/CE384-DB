@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  10 APR 2024 16:56
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  11 APR 2024 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1155,38 +1155,25 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 9.
 LaTeX Font Warning: Command \small invalid in math mode on input line 15.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 40.
+LaTeX Font Warning: Command \small invalid in math mode on input line 41.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 48.
+LaTeX Font Warning: Command \small invalid in math mode on input line 50.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 56.
+LaTeX Font Warning: Command \small invalid in math mode on input line 65.
 
 
-Overfull \hbox (6.65016pt too wide) in paragraph at lines 59--60
-[][]$\OML/cmm/m/it/10 FemaleOnly \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Frequents \
-OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Frequents \U/msb/m/n/10 n
-[] \OML/cmm/m/it/10 FemaleCustomers\OT1/cmr/m/n/10 )$ []
- []
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 64.
+LaTeX Font Warning: Command \small invalid in math mode on input line 72.
 
 [1
 
 ]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 78.
+LaTeX Font Warning: Command \small invalid in math mode on input line 86.
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 85.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 99.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 105.
+LaTeX Font Warning: Command \small invalid in math mode on input line 92.
 
 ) [2] (./questions/2.tex
 
@@ -1236,10 +1223,10 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 Here is how much of TeX's memory you used:
  25414 strings out of 476683
  481805 string characters out of 5807575
- 1860012 words of memory out of 5000000
+ 1859012 words of memory out of 5000000
  45162 multiletter control sequences out of 15000+600000
  514650 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,5n,101p,1342b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,6n,101p,1342b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on HW.pdf (6 pages).
