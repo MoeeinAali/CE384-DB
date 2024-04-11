@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  11 APR 2024 16:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.20)  11 APR 2024 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1160,15 +1160,15 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 41.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 50.
 
+[1
+
+]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 65.
 
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 72.
 
-[1
-
-]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 86.
 
@@ -1223,10 +1223,10 @@ Package rerunfilecheck Info: File `HW.out' has not changed.
 Here is how much of TeX's memory you used:
  25414 strings out of 476683
  481805 string characters out of 5807575
- 1859012 words of memory out of 5000000
+ 1857012 words of memory out of 5000000
  45162 multiletter control sequences out of 15000+600000
  514650 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,6n,101p,1342b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,5n,101p,1342b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on HW.pdf (6 pages).
