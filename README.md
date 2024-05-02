@@ -1,5 +1,5 @@
 # CE384-DB
-Solutions to Mr. Akhi's CE384}: Database Design (Sharif University of Technology - Spring 2024) Assignments
+Solutions to Mr. Akhi's CE384: Database Design (Sharif University of Technology - Spring 2024) Assignments
 
 ## Overview
 
