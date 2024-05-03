@@ -1,0 +1,45 @@
+\subsection*{بخش اول}
+
+\subsubsection*{الف}
+
+\setLTR
+$\prod_{Name,Type,Quantity}(\sigma_{(eqquipted=True)\land(Registration Date > 2023)}($
+
+ $\qquad \qquad \qquad User \bowtie_{User.userid=Inventory.PlayerID}Inventory$
+
+ $\qquad \qquad \qquad \qquad  \bowtie_{Inventory.InventoryID = InventoryHasItem.InventoryID}InventoryHasItem$
+ 
+ $\qquad \qquad \qquad \qquad  \bowtie_{InventoryHasItem.ItemID=Item.ItemID}Item))$
+\setRTL
+
+\subsubsection*{ب}
+
+\setLTR
+$ItemWeapons =\prod_{ItemID} (\sigma_{Type=weapon}(Items))$
+
+$FilteredIDs = \prod_{BuyerID}((\prod_{ItemID,BuyerID}Transactions) \text{\textdiv} (ItemWeapons))$
+
+$Usernames =\prod_{username} (FilteredIDs \bowtie_{FilteredIDs.BuyerID = Users.UserID} Users)$
+\setRTL
+
+\subsubsection*{ج}
+
+\setLTR
+$\prod_{TransactionID}[\sigma_{Transactions.Price>100\$}($
+
+$(Transactions\bowtie_{Transactions.BuyerID=Friends.UserID1 \land Transactions.SellerID=Friends.UserID2}Friends)$
+
+$\bigcup$
+
+$(Transactions\bowtie_{Transactions.SellerID=Friends.UserID1 \land Transactions.BuyerID=Friends.UserID2}Friends))]$
+
+\setRTL
+	
+\subsection*{بخش دوم}
+
+در این کوئری ابتدا آن بازیکن‌هایی که فروشی نداشته‌اند و XP بزرگتر یا مساوی 250 دارند را آیدی‌شان را جدا کرده، سپس کارکترهای آن‌ها را شناسایی کرده، اگر ویژگی آن کارکترها strength بود اسم آن‌ کارکترها را به ما نشان می‌دهد.
+
+\subsection*{بخش سوم}
+
+کوئری B بهتر است و هزینه اجرای کمتری دارد، زیرا ابتدا روی هر رابطه یک بار Selection کرده و سپس ضرب کارتازین را انجام داده ایم، ولی در کوئری A، ابتدا ضرب را انجام داده و سپس Selection را انجام داده‌ایم، این کار باعث می‌شود که محاسبات اضافی زیادی را انجام بدهیم و Table خود را خیلی خیلی بزرگ کنیم در صورتی که به آن نیازی نداریم. 
+
