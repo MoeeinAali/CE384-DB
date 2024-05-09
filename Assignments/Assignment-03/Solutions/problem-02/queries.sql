@@ -31,4 +31,13 @@ GROUP BY orders.customer_id
 ORDER BY total_discount DESC
 LIMIT 3;
 -- Query 4
--- ؟؟؟؟؟؟؟؟؟؟؟
+SELECT product_id
+FROM(
+ SELECT product_id, SUM(stocks.quantity) AS total_quantity
+ FROM orders
+ JOIN order_items USING (order_id)
+ RIGHT JOIN stocks USING (store_id, product_id)
+ WHERE (order_id IS NULL AND stocks.quantity > 0)
+ GROUP BY product_id
+ ORDER BY total_quantity DESC
+)
