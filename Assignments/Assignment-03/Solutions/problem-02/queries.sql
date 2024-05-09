@@ -21,5 +21,14 @@ FROM (SELECT state
                              JOIN customers ON orders.customer_id = customers.customer_id
                     WHERE order_status = 4
                       AND stores.state = customers.state
-                    GROUP BY stores.state) AS state_orders ON states.state = state_orders.state
-
+                    GROUP BY stores.state) AS state_orders ON states.state = state_orders.state;
+-- Query 3
+SELECT customer_id, SUM(order_items.quantity * products.list_price * order_items.discount) AS total_discount
+FROM orders
+         JOIN order_items ON orders.order_id = order_items.order_id
+         JOIN products ON order_items.product_id = products.product_id
+GROUP BY orders.customer_id
+ORDER BY total_discount DESC
+LIMIT 3;
+-- Query 4
+-- ؟؟؟؟؟؟؟؟؟؟؟
