@@ -29,13 +29,13 @@ CREATE OR REPLACE FUNCTION get_review_count(id TEXT)
     RETURNS INT AS
 $$
 DECLARE
-    review_count INT
+    review_count INT;
 BEGIN
     SELECT COUNT(*)
     INTO review_count
     FROM reviews
-    WHERE movie_id = id
-    RETURN review_count
+    WHERE movie_id = id;
+    RETURN review_count;
 END
 $$
     LANGUAGE plpgsql;
