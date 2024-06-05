@@ -57,13 +57,14 @@ $Partial \ Dependency$
 $Transitive \ Dependency$
 موجود بین 
 $wordText$
-و کلید کاندید را از بین می‌بریم. پس در کل به 3 رابطه نیاز داریم:
+و کلید کاندید را از بین می‌بریم. پس در کل به 4 رابطه نیاز داریم:
 
 \setLTR
 $
-R_1 = \{\underline{wordID} , wordText\} \\
-R_2 = \{\underline{msgID},userID,visibility\} \\
-R_3 = \{\underline{msgID},\underline{wordPosition},wordID\}
+R_1 = \{\underline{msgID},visibility\}\\
+R_2 = \{\underline{msgID},userID\} \\
+R_3 = \{\underline{msgID,wordPosition},wordID\}\\
+R_4 = \{\underline{wordID},wordText\}
 $
 \setRTL
 
@@ -76,6 +77,6 @@ $BCNF$
 
 \setLTR
 $
-R = R_1 \bowtie_{R_1.wordID=R_3.wordID} R_3 \bowtie_{R_3.msgID=R_2.msgID} R_2
+R = R_1 \bowtie_{msgID} R_2 \bowtie_{msgID} R_3 \bowtie_{wordID} R_4
 $
 \setRTL

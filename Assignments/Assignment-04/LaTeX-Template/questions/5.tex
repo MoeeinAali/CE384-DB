@@ -1,0 +1,76 @@
+\subsection*{الف}
+آنومالی‌های رابطه‌ی فعلی:
+\begin{enumerate}
+	\item INSERT
+	
+	در رابطه‌ی فعلی اگر بخواهیم یک کتاب اضافه کنیم باید حتما آن را قرض بدهیم و در جدول درج کنیم که این اشتباه است و نوعی آنومالی رایج است. همچنین برای نویسنده‌ هم همچین مشکلی وجود دارد.
+	\item UPDATE
+	
+	همانند سوال قبلی اگر بخواهیم مقدار یکی از ستون‌های جدول را تغییر دهیم‌، باید در تعدادی زیادی رکورد این مقدار را تغییر دهیم که کار هزینه‌بری است.
+	
+	\item DELETE
+	
+	همانند سوال قبلی اگر یک سطر را از جدول فعلی حذف کنیم، اطلاعات مربوط به یک نویسنده یا یک کتاب حذف می‌شود که ما این را نمی‌خواهیم.
+\end{enumerate}
+
+حال برای تبدیل به $2NF$، اقدام به شکستن 
+$Partial \ Dependency$ها 
+می‌کنیم:
+
+\setLTR
+$
+Borrower(\underline{borrowerID},borrowerName) \\ \\
+Borrow(\underline{borrowID},dueDate) \\ \\
+BorrowBook(\underline{borrowID},\underline{borrowerID},\underline{bookID},) \\ \\
+BorrowerFeedback(\underline{borrowerID},\underline{bookID},feedback) \\ \\
+Book(\underline{bookID},writer,genre) 
+$
+\setRTL
+
+اکنون آنومالی مربوط به 
+$INSERT,DELETE$
+حل شد، حال با تبدیل به $3NF$ آنومالی مربوط به $UPDATE$ را حل می‌کنیم:
+
+\setLTR
+$
+bookWriter(\underline{bookID},writer) \\ \\
+writerGenre(\underline{Writer,Genre}) \\ \\
+Borrower(\underline{borrowerID},borrowerName) \\ \\
+Borrow(\underline{borrowID},dueDate) \\ \\
+BorrowBook(\underline{borrowID},\underline{borrowerID},\underline{bookID},) \\ \\
+BorrowerFeedback(\underline{borrowerID},\underline{bookID},feedback) \\ 
+$
+\setRTL
+
+\subsection*{ب}
+
+هیچ کدام از وابستگی‌ها از بین نرفته است، پس هردو دارای 
+$Dependency \ Preserving$
+هستند.
+\pagebreak 
+
+\subsection*{ج}
+
+همچنان برای $INSERT,DELETE$ آنومالی وجود دارد، به عنوان مثال برای حذف یک کتاب مجبوریم که تمامی فیدبک‌های آن را یکی‌یکی حذف کنیم.
+
+حال برای تبدیل به $BCNF$، رابطه‌ی $BorrowFeedback$ را می‌شکنیم:
+
+\setLTR
+$
+BorrowFeedback(\underline{borrowerID},Feedback)\\ \\
+BookFeedback(\underline{Feedback},bookID)
+$
+\setRTL
+
+
+با اضافه کردن دو جدول فوق، رابطه‌ی 
+
+$(BorrowerID,BookID)\rightarrow FeedBack$
+از بین رفت و 
+$Dependency \ Preserving$
+نقض شد.
+
+\subsection*{د}
+به عنوان مثال اگر در جدول $BorrowBook$ به جای استفاده از $PK$، از $BookID$ استفاده کنیم و جوین بزنیم، آن‌گاه اگر یک کتاب خاص چند بار به افراد متنوع قرض داده شده باشد، دیتاهایی را از دست میدهیم و دیگر $LossLess$ نیست!
+
+
