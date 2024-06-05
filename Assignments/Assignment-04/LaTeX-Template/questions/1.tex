@@ -1,0 +1,112 @@
+در این سوال فرض کرده‌ایم که همه ستون‌ها 
+$Atomic$
+هستند.
+
+\subsection*{الف}
+
+\setLTR
+$
+R = (X,Y,Z,S,T,U,V) \\
+FDs=\begin{cases}
+	S\rightarrow X\\
+	S\rightarrow V \\
+	T \rightarrow Y \\
+	X \rightarrow Y \\
+	XY \rightarrow TUZ
+	\end{cases} = \begin{cases}
+	S\rightarrow X\\
+	S\rightarrow V \\
+	T \rightarrow Y \\
+	X \rightarrow Y \\
+	XY \rightarrow T \\
+	XY \rightarrow U \\
+	XY \rightarrow Z
+	\end{cases} = \begin{cases}
+	S\rightarrow X\\
+	S\rightarrow V \\
+	T \rightarrow Y \\
+	X \rightarrow T \\
+	X \rightarrow U \\
+	X \rightarrow Z
+	\end{cases}
+$
+\setRTL
+
+همانطور که مشخص است، ‌ستون $S$ می‌تواند باقی ستون‌ها را تعیین کند و از دیگر ستون‌ها نمی‌توان به $S$ رسید. پس حتما $S$ داخل کلید کاندید ما موجود است و چون باقی ستون‌ها از آن بدست می‌آیند، پس کلید کاندید ما فقط $\{S\}$ است.
+
+همه ستون‌‌های دیگر به کلید کاندید وابستگی مستقیم یا غیرمستقیم دارند، چون کلید کاندید ما تک عضوی است، پس این دیتابیس 
+$2NF$
+است. اما دیتابیس از نوع $3NF$ نیست زیرا که به عنوان مثال ستون $Y$ به ستون $T$ که کلید کاندید نیست وابستگی دارد.
+
+حال با شکستن روابط تعدی موجود، دیتابیس را به فرم نرمال مرتبه سوم تبدیل می‌کنیم:
+
+\setLTR
+$
+R_1 = \{\underline{T},Y\} \\ \\
+R_2 = \{\underline{S},X,V\} \\ \\
+R_3 = \{\underline{X},T,U,Z\}
+$
+\setRTL
+
+حال چون فقط یک کلید کاندید داریم و دیتابیس از نوع $3NF$ هم هست، پس قطعا از نوع $BCNF$ هم هست.
+
+
+
+
+
+\pagebreak
+
+
+\subsection*{ب}
+
+\setLTR
+$
+R = (A,B,C,D,E) \\
+FDs=\begin{cases}
+	A\rightarrow BC \\
+	BC \rightarrow AD \\
+	D \rightarrow E
+\end{cases} = \begin{cases}
+A\rightarrow B \\
+A\rightarrow C \\
+BC \rightarrow D \\
+BC \rightarrow A \\
+D \rightarrow E
+\end{cases}
+$
+\setRTL
+
+کلیدهای کاندید دیتابیس ما 
+$\{A,BC\}$
+هستند.
+
+همه ستون‌های غیر کلید به کل کلید اصلی وابستگی تابعی دارد، پس از نوع $1NF$ نرمال شده است. اما چون ستون غیر کلیدی پیدا می‌شود که به ستون غیر کلید دیگری وابستگی تابعی دارد، پس از نوع $3NF$ نرمال شده نیست. به عنوان مثال ستون $E$ به ستون $D$ وابسته است.
+
+پس جدول را به این شکل می‌شکنیم تا در هر رابطه‌ی تابعی، ستون سمت چپ یک کلید کاندید باشد. پس:
+
+\setLTR
+$
+R_1 = \{\underline{A},B,C\} \\ \\
+R_2 = \{\underline{B,C},D\} \\ \\
+R_3 = \{\underline{D},E\} \\ 
+$
+\setRTL
+
+با توجه به این که در تمامی $FD$ها، ستون سمت چپ یک کلید کاندید است، پس دیتابیس ما از نوع 
+$BCNF$
+نرمال شده است.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
