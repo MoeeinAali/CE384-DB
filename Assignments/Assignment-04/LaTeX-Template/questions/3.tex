@@ -1,0 +1,81 @@
+\subsection*{الف}
+مراحل زیر را طی می‌کنیم:
+\begin{enumerate}
+	\item 
+	هر وابستگی تابعی در F را به طوری تجزیه کنید که در سمت راست فقط یک ستون وجود داشته باشد.
+	\item 
+صفات اضافی را با محاسبه بسته closure صفات سمت چپ به جز صفت مورد نظر، حذف کنید.
+\item 
+وابستگی‌های تابعی زائد را حذف کنید.
+\item
+اطمینان حاصل کنید که سمت راست هر وابستگی تابعی فقط شامل یک صفت باشد.
+\item 
+روابطی که با استفاده از تعدی به وجود آمده‌اند را حذف می‌کنیم.
+\end{enumerate}
+
+\subsection*{ب}
+
+پس از اجرای الگوریتم فوق، به مجموعه $FDs$ زیر می‌رسیم:
+
+\setLTR
+$
+FDs = \begin{cases}
+msgID,wordPosition \rightarrow wordID \\
+wordID \rightarrow wordText \\
+wordText \rightarrow wordID \\
+msgID \rightarrow  visibility\\
+msgID \rightarrow  userID\\
+\end{cases}
+$
+\setRTL
+
+
+\subsection*{ج}
+این عبارت 
+\underline{\textbf{درست}}
+است. زیرا:
+
+\setLTR
+$
+\begin{cases}
+	msgID,wordID \rightarrow visibility \\
+	msgID \rightarrow userID
+\end{cases} \longrightarrow 
+\begin{cases}
+	msgID,wordID,visibility \rightarrow userID
+\end{cases}
+$
+\setRTL
+
+
+\subsection*{د}
+می‌دانیم که کلید کاندید ما 
+$\{msgID,wordPosition\}$
+است. در ابتدا 
+$Partial \ Dependency$
+موجود در $wordID$ و سپس 
+$Transitive \ Dependency$
+موجود بین 
+$wordText$
+و کلید کاندید را از بین می‌بریم. پس در کل به 3 رابطه نیاز داریم:
+
+\setLTR
+$
+R_1 = \{\underline{wordID} , wordText\} \\
+R_2 = \{\underline{msgID},userID,visibility\} \\
+R_3 = \{\underline{msgID},\underline{wordPosition},wordID\}
+$
+\setRTL
+
+با توجه به اینکه که مجموعه کلیدهای کاندید ما تک عضوی است، پس دیتابیس ما 
+$BCNF$
+هم هست.
+
+در نتیجه چون نرمال‌سازی ما در سطح $BCNF$ است، پس $LossLess$ است و $Dependency$ها را حفظ می‌کند.
+\subsection*{ه}
+
+\setLTR
+$
+R = R_1 \bowtie_{R_1.wordID=R_3.wordID} R_3 \bowtie_{R_3.msgID=R_2.msgID} R_2
+$
+\setRTL
