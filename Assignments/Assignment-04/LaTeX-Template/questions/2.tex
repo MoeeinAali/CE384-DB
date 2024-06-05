@@ -1,0 +1,84 @@
+\setLTR
+$
+R_1 = (X,Y,Z)\\ \\
+FDs_1=\begin{cases}
+	Y\rightarrow X \\  XZ\rightarrow Y \\ X\rightarrow Z
+	\end{cases}
+$
+\setRTL
+
+ابتدا مجموعه‌ $FDs$ را ساده می‌کنیم:
+
+\setLTR
+$
+ \longrightarrow FDs_1=\begin{cases}
+	Y\rightarrow X \\  X\rightarrow Y \\ X\rightarrow Z
+\end{cases} \longrightarrow FDs_1=\begin{cases}
+	Y\rightarrow X \\  X\rightarrow YZ 
+\end{cases}
+$
+\setRTL
+
+\subsection*{الف}
+این عبارت 
+\underline{\textbf{نادرست}}
+است.
+زیرا $Z$ خودش از $X$ بدست می‌آید و از آن نمی‌توان چیزی را بدست آورد.
+\subsection*{ب}
+این عبارت 
+\underline{\textbf{نادرست}}
+است.
+اگر رابطه 
+$X\rightarrow Z$
+را حذف کنیم، از روابط باقی‌مانده نمی‌توان آن را بدست آورد.
+\subsection*{ج}
+این عبارت 
+\underline{\textbf{نادرست}}
+است.
+زیرا خود $Z$ از $X$ بدست می‌آید. پس وجود $Z$ اضافی است و باید حذف شود.
+\subsection*{د}
+این عبارت 
+\underline{\textbf{درست}}
+است.
+با توجه به این که دیتابیس ما $1NF$ است و $CK$های ما همگی تک‌عضوی هستند، پس $2NF$ هم هست. با توجه به این که $X,Y$ کلیدهای کاندید ما هستند و ستون $Z$ به ستونی به جز کلیدهای کاندید وابسته نیست، پس دیتابیس $3NF$ هم هست. همچنین در سمت چپ تمامی $FD$های موجود، فقط کلید کاندید وجود دارد، پس دیتابیس ما در نهایت $BCNF$ است.
+\subsection*{ه}
+این عبارت 
+\underline{\textbf{درست}}
+است.
+
+\setLTR
+$
+R_2 = (A,B,C,D,E)\\ \\
+FDs_2=\begin{cases}
+	A\rightarrow B \\  AB\rightarrow CD \\ D\rightarrow ABC
+\end{cases}
+$
+\setRTL
+
+واضح است که کلیدهای کاندید این دیتابیس، $DE , AE$ هستند. همچنین دیتابیس اول هم دارای کلیدهای کاندید $X,Y$ هستند. پس کلید کاندید دیتابیس حاصل 
+$Cartesian \ Product$
+این دو، باید شامل یک کلید کاندید از اولی و یک کلید کاندید از دومی باشد. پس در کل $2\times 2$
+حالت داریم:
+
+
+\setLTR
+$
+CK=\{
+YAE,YDE,XAE,XDE
+\}
+$
+\setRTL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
