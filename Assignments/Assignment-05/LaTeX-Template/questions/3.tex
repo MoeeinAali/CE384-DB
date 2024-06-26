@@ -1,0 +1,69 @@
+در ابتدا دیتابیس را ساخته و داده‌ها را به آن اضافه می‌کنیم:
+
+\setLTR
+\begin{lstlisting}
+use airline_tweets;
+db.createCollection("tweets");
+\end{lstlisting}
+\setRTL
+
+\subsection*{الف}
+\setLTR
+\begin{lstlisting}
+db.tweets.find();
+\end{lstlisting}
+\setRTL
+\subsection*{ب}
+\setLTR
+\begin{lstlisting}
+db.tweets.find({"airline_sentiment":"negative"});
+\end{lstlisting}
+\setRTL
+\subsection*{ج}
+\setLTR
+\begin{lstlisting}
+db.tweets.find({
+	"airline":"Delta",
+	"airline_sentiment": "positive"
+});
+\end{lstlisting}
+\setRTL
+\subsection*{د}
+\setLTR
+\begin{lstlisting}
+db.tweets.aggregate([
+{
+$group: {
+	_id: "$airline",
+	positive_count: { $sum: { $cond: [{ $eq: ["$airline_sentiment", "positive"] }, 1, 0] } },
+	negative_count: { $sum: { $cond: [{ $eq: ["$airline_sentiment", "negative"] }, 1, 0] } },
+	neutral_count: { $sum: { $cond: [{ $eq: ["$airline_sentiment", "neutral"] }, 1, 0] } }
+	}
+}
+]);
+\end{lstlisting}
+\setRTL
+\subsection*{ه}
+\setLTR
+\begin{lstlisting}
+db.tweets.find({
+	$or: [
+	{ "text": { $regex: /Word1/ } },
+	{ "text": { $regex: /Word2/ } }
+	]
+});	
+\end{lstlisting}
+\setRTL
+\subsection*{و}
+\setLTR
+\begin{lstlisting}
+db.tweets.aggregate([
+{
+	$group: {
+		_id: "$airline",
+		avg_response_time: { $avg: { $toDate: "$tweet_created" } }
+	}
+}
+]);	
+\end{lstlisting}
+\setRTL

@@ -1,0 +1,109 @@
+این کوئری همه افرادی که 20 سال سن دارند و از بین دوستان آن‌ها حداقل یک نفر به نام $Jane \ Doe$ وجود دارد را برمی‌گرداند:
+\setLTR
+\begin{lstlisting}
+db.students.find(
+	{"age":20, "friends.name": "Jane Doe"}
+)
+\end{lstlisting}
+\setRTL
+
+
+این کوئری افرادی را می‌دهد که تاریخ اد شدن آن‌ها بزرگتر از تاریخ داده شده باشد:
+\setLTR
+\begin{lstlisting}
+db.students.find(
+	{"createdAt": { $gt: ISODate("2021-01-01T00:00:00Z")}}
+)
+\end{lstlisting}
+\setRTL
+
+
+این کوئری به ما افرادی را برمی‌گرداند که در آنها address.city برابر با "Anytown" است و فقط فیلدهای name و email از آن افراد نمایش داده می‌شوند، در حالی که id پنهان خواهد بود:
+\setLTR
+\begin{lstlisting}
+db.students.find(
+	{"address.city": "Anytown"}, 
+	{"name": 1, "email": 1, "_id": 0}
+)
+\end{lstlisting}
+\setRTL
+
+این کوئری افرادی را می‌دهد که نام آن‌ها با J شروع می‌شود:
+\setLTR
+\begin{lstlisting}
+db.students.find(
+	{"name": {$regex: /^J/}}
+)
+\end{lstlisting}
+\setRTL
+
+این کوئری افرادی  را که مقدار فیلد address.state آنها "CA" است، پیدا می‌کند و سپس نتایج را بر اساس فیلد age به ترتیب صعودی سورت می‌کند:
+\setLTR
+\begin{lstlisting}
+db.students.find(
+	{"address.state": "CA"}).sort({"age": 1}
+)
+\end{lstlisting}
+\setRTL
+
+
+این کوئری جوان‌ترین فرد را نشان می‌دهد:
+\setLTR
+\begin{lstlisting}
+db.students.find().sort({"age": 1}).limit(1)
+\end{lstlisting}
+\setRTL
+
+
+این کوئری افرادی را که ایمیل آن‌ها ثبت نشده است را نشان می‌دهد:
+\setLTR
+\begin{lstlisting}
+db.students.find(
+	{"email": {$exists: false}}
+)
+\end{lstlisting}
+\setRTL
+
+این کوئری افرادی را که بیش از 1 دوست دارند را نشان می‌دهد:
+\setLTR
+\begin{lstlisting}
+db.students.find({
+	"friends": {$size: {$gt: 1}}}
+)
+\end{lstlisting}
+\setRTL
+
+این کوئری افرادی را نشان می‌دهد که بین 20 تا 30 سال سن دارند:
+\setLTR
+\begin{lstlisting}
+ db.students.find(
+ 	{"age": {$gte:20, $lte:30}}
+)
+\end{lstlisting}
+\setRTL
+\pagebreak
+
+این کوئری گروه بندی خاصی انجام نمیدهد زیرا ID ما برابر با Null است، درنتیجه در اصل میانگین سن همه افراد را دارد محاسبه می‌کند:
+\setLTR
+\begin{lstlisting}
+db.students.aggregate([{
+	$group: {
+		_id: null,averageAge: {$avg: "$age"}
+	}
+}])
+\end{lstlisting}
+\setRTL
+
+این کوئری رکوردها را با فیلدهای جدیدی خروجی می‌دهد. نام و ایمیل را از قبل نشان می‌دهد و دو فیلد تعداد دوستان و طول اسم را جدید اضافه می‌کند:
+\setLTR
+\begin{lstlisting}
+db.students.aggregate(
+[{
+	$project: {name: 1,
+			   email: 1,
+			   numberOfFriends: {$size: "$friends"},
+			   nameLength: {$strLenCP: "$name"}
+			  }
+}])
+\end{lstlisting}
+\setRTL
