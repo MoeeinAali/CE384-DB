@@ -1,0 +1,59 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{commons/course}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Define colors for syntax highlighting
+\definecolor{keywordstyle}{rgb}{0.0, 0.4, 0.8} % A bluer shade
+\definecolor{stringstyle}{rgb}{0.9, 0.17, 0.31} % amaranth
+\definecolor{commentstyle}{rgb}{0.1, 0.6, 0.2} % green
+\definecolor{numberstyle}{rgb}{0.4, 0.4, 0.4} % gray
+\definecolor{backgroundcolor}{rgb}{0.94, 0.97, 1.0} % aliceblue
+
+% Define the Python-like language for syntax highlighting
+\lstdefinelanguage{PythonLike}{
+	morekeywords={db,capped,size,max,collection,mongoexport,mongoimport,file,out},
+	sensitive=false,
+	morecomment=[l]{;},
+	morestring=[b]",
+}
+
+
+
+
+% Set the style for Python-like code
+\lstset{
+	language=PythonLike,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{keywordstyle},
+	stringstyle=\color{stringstyle},
+	commentstyle=\color{commentstyle},
+	numbers=left,
+	numberstyle=\tiny\color{numberstyle},
+	stepnumber=1,
+	numbersep=5pt,
+	keepspaces=true,
+	tabsize=4,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	breaklines=true,
+	breakatwhitespace=false,
+	frame=single,
+	backgroundcolor=\color{backgroundcolor},
+}
+
+
+\begin{document}
+
+\سربرگ{معین آعلی - 401105561}{Execution Query}{}{استاد: مهدی آخی}
+
+
+
+
+\input{questions/1.tex}
+\pagebreak
+\input{questions/2.tex}
+\end{document}
